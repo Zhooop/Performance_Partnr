@@ -161,20 +161,20 @@ ul {
 
 .text-gold,
 .section-title .text-gold {
-  color: #F59E0B;
-  background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 50%, #D97706 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--royal-blue);
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
   display: inline;
 }
 
 @media (prefers-color-scheme: dark) {
   .text-gold,
   .section-title .text-gold {
-    color: #FDE68A;
-    background: linear-gradient(135deg, #FFF176 0%, #FBBF24 50%, #F59E0B 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #4A85F6;
+    background: none;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
   }
 }
 
