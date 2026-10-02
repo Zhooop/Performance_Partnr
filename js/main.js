@@ -141,8 +141,29 @@ function initBrochureModal() {
     `;
 
     setTimeout(() => {
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = originalText;
+      // Fire Meta Pixel & Google Analytics Lead Conversion Events
+      try {
+        if (typeof fbq === 'function') {
+          fbq('track', 'Lead', {
+            content_name: 'Commercial Office Suite Inquiry',
+            status: 'submitted'
+          });
+        }
+        if (typeof gtag === 'function') {
+          gtag('event', 'generate_lead', {
+            event_category: 'Lead',
+            event_label: isInsideModal ? 'Modal Form' : 'Hero Form'
+          });
+        }
+        if (window.dataLayer) {
+          window.dataLayer.push({
+            event: 'lead_form_submitted',
+            form_type: isInsideModal ? 'modal' : 'hero'
+          });
+        }
+      } catch (err) {
+        console.warn('Analytics tracking error:', err);
+      }
 
       // Trigger automatic simulated file download
       triggerBrochureDownload();
