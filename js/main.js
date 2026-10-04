@@ -50,6 +50,7 @@ function initBrochureModal() {
   const modalFormContainer = document.getElementById('modalFormContainer');
   const modalTitle = document.getElementById('modalDynamicTitle');
   const modalSubtitle = document.getElementById('modalDynamicSubtitle');
+  const successCloseBtn = document.getElementById('successCloseBtn');
 
   if (!modal) return;
 
@@ -58,6 +59,10 @@ function initBrochureModal() {
   triggerButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
+      clearTimeout(autoTimer);
+      try {
+        sessionStorage.setItem('kamdhenu_auto_modal_seen', 'true');
+      } catch (err) {}
       const context = btn.getAttribute('data-context') || 'brochure';
       
       // Customize modal text based on button clicked
@@ -89,12 +94,65 @@ function initBrochureModal() {
   }
 
   function closeModal() {
+    clearTimeout(autoTimer);
+    try {
+      sessionStorage.setItem('kamdhenu_auto_modal_seen', 'true');
+    } catch (err) {}
     modal.classList.remove('active');
     document.body.style.overflow = '';
   }
 
   if (closeBtn) {
     closeBtn.addEventListener('click', closeModal);
+  }
+
+  if (successCloseBtn) {
+    successCloseBtn.addEventListener('click', closeModal);
+  }
+
+  // Auto-Popup System: Trigger after 5.5s OR when user scrolls to Amenities section
+  let autoModalFired = false;
+  try {
+    if (sessionStorage.getItem('kamdhenu_auto_modal_seen')) {
+      autoModalFired = true;
+    }
+  } catch (err) {}
+
+  function triggerAutoModal() {
+    if (autoModalFired) return;
+    if (modal.classList.contains('active')) return;
+
+    autoModalFired = true;
+    try {
+      sessionStorage.setItem('kamdhenu_auto_modal_seen', 'true');
+    } catch (err) {}
+
+    modalTitle.textContent = 'Enquire for Project Pricing & Details';
+    modalSubtitle.textContent = 'Get instant access to complete floor layouts, verified cost breakdown & payment plans.';
+    openModal();
+  }
+
+  // 1. Timer trigger: 5.5 seconds for first-time visitors
+  const autoTimer = setTimeout(() => {
+    triggerAutoModal();
+  }, 5500);
+
+  // 2. Scroll trigger: When reaching the Amenities Section
+  const amenitiesSec = document.getElementById('amenities-section');
+  if (amenitiesSec && 'IntersectionObserver' in window) {
+    const amenitiesObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          clearTimeout(autoTimer);
+          triggerAutoModal();
+          amenitiesObserver.disconnect();
+        }
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: '0px 0px -30px 0px'
+    });
+    amenitiesObserver.observe(amenitiesSec);
   }
 
   // Close on backdrop click
