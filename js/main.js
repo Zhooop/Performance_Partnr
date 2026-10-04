@@ -65,14 +65,14 @@ function initBrochureModal() {
         modalTitle.textContent = 'Unlock Exclusive Price & Cost Sheet';
         modalSubtitle.textContent = 'Enter your details to receive unit-wise all-inclusive pricing breakdown.';
       } else if (context === 'floorplan') {
-        modalTitle.textContent = 'Download High-Res 2D & 3D Floor Plans';
+        modalTitle.textContent = 'Request Official 2D & 3D Floor Plans';
         modalSubtitle.textContent = 'Get detailed carpet area, architectural blueprints & layout PDFs.';
       } else if (context === 'sitevisit') {
         modalTitle.textContent = 'Schedule a VIP Private Site Visit';
         modalSubtitle.textContent = 'Complimentary luxury cab pick & drop service available.';
       } else {
-        modalTitle.textContent = 'Download Official Project Brochure';
-        modalSubtitle.textContent = 'Get the complete e-brochure, floor layouts & payment plan PDF instantly.';
+        modalTitle.textContent = 'Enquire for Project Pricing & Details';
+        modalSubtitle.textContent = 'Get complete floor layouts, pricing breakdown & site visit appointments.';
       }
 
       openModal();
@@ -165,43 +165,18 @@ function initBrochureModal() {
         console.warn('Analytics tracking error:', err);
       }
 
-      // Trigger automatic simulated file download
-      triggerBrochureDownload();
-
       if (isInsideModal) {
         modalFormContainer.style.display = 'none';
         successState.classList.add('active');
       } else {
         // Hero form submitted -> open modal in success state
         modalTitle.textContent = 'Request Received Successfully!';
-        modalSubtitle.textContent = 'Your official brochure & price sheet is downloading.';
+        modalSubtitle.textContent = 'Our commercial advisor will connect with you on WhatsApp shortly.';
         modalFormContainer.style.display = 'none';
         successState.classList.add('active');
         openModal();
       }
     }, 900);
-  }
-
-  // Simulated PDF download creation
-  function triggerBrochureDownload() {
-    const sampleContent = `ICONIC OFFICES - THE BIGGEST COMMERCIAL ICON OF THANE-BELAPUR ROAD
-======================================================
-Location: Thane-Belapur Road, Navi Mumbai
-Configurations: Iconic Commercial Office Suites
-Starting Price: INR 99.99 Lacs* onwards
-RERA Reg No: P51700034567
-
-Thank you for your interest! A dedicated commercial advisory manager 
-has been assigned to your query and will connect shortly with inventory & floor plans.
-======================================================`;
-
-    const blob = new Blob([sampleContent], { type: 'text/plain;charset=utf-8' });
-    const link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
-    link.download = 'Iconic-Offices-Thane-Belapur-Brochure.txt';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
   }
 }
 
@@ -316,7 +291,7 @@ function initSocialProofToast() {
 
   const activities = [
     { name: 'Karan Mehta', city: 'Mahape IT Park', action: 'booked a VIP commercial site visit', time: '2 mins ago' },
-    { name: 'Dr. Suresh Patil', city: 'Vashi Sector 17', action: 'downloaded 539 Sq.Ft. cost sheet', time: '4 mins ago' },
+    { name: 'Dr. Suresh Patil', city: 'Vashi Sector 17', action: 'enquired for 539 Sq.Ft. suite', time: '4 mins ago' },
     { name: 'Rajiv Khanna', city: 'Airoli Mindspace', action: 'unlocked 610 Sq.Ft. corner layout', time: '7 mins ago' },
     { name: 'Apex Logistics Ltd.', city: 'Thane West', action: 'reserved 1,365 Sq.Ft. Corporate Suite', time: '11 mins ago' },
     { name: 'Sunil Desai', city: 'BKC, Mumbai', action: 'requested commercial ROI & payment plan', time: '15 mins ago' }

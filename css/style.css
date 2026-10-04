@@ -305,9 +305,10 @@ ul {
   transform-origin: center center;
 }
 
-/* Download brochure icon gentle bouncing animation */
+/* Primary CTA enquiry icon subtle animation */
 .btn-pulse svg,
-[data-context="brochure"] svg,
+[data-context="enquiry"] svg,
+[data-context="pricing"] svg,
 .btn-gold svg {
   animation: iconDownloadBounce 2.2s ease-in-out infinite;
   transform-origin: center center;
