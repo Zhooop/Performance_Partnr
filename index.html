@@ -144,10 +144,18 @@
         <!-- Left Column: Architectural Video Showcase -->
         <div class="hero-commercial-left">
           <div class="commercial-tower-card">
+            <div class="video-top-tag">
+              <span class="video-live-dot"></span>
+              <span>Live Drone View &bull; 100+ Acre Township</span>
+            </div>
             <video class="commercial-tower-video" autoplay muted loop playsinline preload="metadata" poster="images/hero-living.webp">
               <source src="video/video.mp4" type="video/mp4">
               Your browser does not support HTML5 video.
             </video>
+            <div class="video-bottom-caption">
+              <div class="vbc-title">Kalpataru Parkcity</div>
+              <div class="vbc-sub">Thane (W) &bull; Grand Central Park Campus</div>
+            </div>
           </div>
         </div>
 
@@ -174,16 +182,24 @@
           <!-- 4 Core Highlights -->
           <div class="commercial-badges-row">
             <div class="comm-badge-item" title="100+ Acre Township with 70% Open Space">
-              <img src="images/sec1.webp" decoding="async" alt="100+ Acre Township" class="hero-feature-icon-img">
+              <div class="badge-icon-pill">⛳</div>
+              <span class="badge-num">100+ Acres</span>
+              <span class="badge-lbl">70% Open Space</span>
             </div>
             <div class="comm-badge-item" title="20+ Acre Grand Central Park & 3 Acre Lake Zone">
-              <img src="images/sec2.webp" decoding="async" alt="20+ Acre Grand Central Park" class="hero-feature-icon-img">
+              <div class="badge-icon-pill">⛲</div>
+              <span class="badge-num">20+ Acre GCP</span>
+              <span class="badge-lbl">3-Acre Lake Zone</span>
             </div>
             <div class="comm-badge-item" title="6 World-Renowned Architectural Experts">
-              <img src="images/sec3.webp" decoding="async" alt="6 International Experts" class="hero-feature-icon-img">
+              <div class="badge-icon-pill">🏛️</div>
+              <span class="badge-num">6 Global Experts</span>
+              <span class="badge-lbl">Iconic Architecture</span>
             </div>
-            <div class="comm-badge-item" title="51+ Years of Kalpataru Legacy">
-              <img src="images/sec4.webp" decoding="async" alt="51+ Years of Legacy" class="hero-feature-icon-img">
+            <div class="comm-badge-item" title="405+ Curated Lifestyle Amenities">
+              <div class="badge-icon-pill">🏊</div>
+              <span class="badge-num">405+ Features</span>
+              <span class="badge-lbl">Curated Amenities</span>
             </div>
           </div>
 
@@ -279,118 +295,114 @@
           <p class="section-subtitle">Crafted with international excellence, cutting-edge sustainability, and unmatched natural serenity to build an iconic inheritance for generations.</p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 24px;">
+        <div class="pillars-image-grid reveal-item">
           
-          <!-- Pillar 1: Iconic Expanse -->
-          <div class="reveal-item" style="background:#FFFFFF; border:1px solid rgba(78, 136, 118, 0.22); border-radius:12px; padding:24px; box-shadow:var(--shadow-sm); transition:transform 0.2s, box-shadow 0.2s;">
-            <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
-              <div style="width:44px; height:44px; border-radius:10px; background:var(--sky-blue); display:flex; align-items:center; justify-content:center; font-size:1.4rem;">⛳</div>
-              <h3 style="font-size:1.15rem; font-weight:800; color:var(--primary-navy); margin:0;">Iconic Expanse</h3>
+          <!-- Pillar Card 1: Grand Central Park -->
+          <div class="pillar-img-card">
+            <div class="pillar-card-img-wrap">
+              <span class="pillar-floating-tag">⛳ 20+ Acre Park</span>
+              <img src="images/amenities/grand-central-park.webp" alt="Grand Central Park and Lake Zone" class="pillar-card-img" loading="lazy" decoding="async">
             </div>
-            <ul style="color:var(--text-muted); font-size:0.92rem; line-height:1.7; padding-left:4px;">
-              <li>&bull; Sprawled majestically across <strong>100+ Acres</strong></li>
-              <li>&bull; Features a <strong>20+ Acre Grand Central Park (GCP)</strong></li>
-              <li>&bull; Serene <strong>3-Acre Lake Zone</strong> within GCP</li>
-              <li>&bull; <strong>70% Open &amp; Green Spaces</strong> across the township</li>
-            </ul>
+            <div class="pillar-card-body">
+              <h3 class="pillar-card-title">Grand Central Park &amp; Lake</h3>
+              <p class="pillar-card-desc">20+ Acre lush central park with a 3-acre lake zone, 4,500+ trees, and 70% open green expanses.</p>
+            </div>
           </div>
 
-          <!-- Pillar 2: Iconic Design -->
-          <div class="reveal-item" style="background:#FFFFFF; border:1px solid rgba(78, 136, 118, 0.22); border-radius:12px; padding:24px; box-shadow:var(--shadow-sm); transition:transform 0.2s, box-shadow 0.2s;">
-            <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
-              <div style="width:44px; height:44px; border-radius:10px; background:var(--sky-blue); display:flex; align-items:center; justify-content:center; font-size:1.4rem;">🏛️</div>
-              <h3 style="font-size:1.15rem; font-weight:800; color:var(--primary-navy); margin:0;">Iconic Design</h3>
+          <!-- Pillar Card 2: Iconic Design -->
+          <div class="pillar-img-card">
+            <div class="pillar-card-img-wrap">
+              <span class="pillar-floating-tag">🏛️ 6 Global Experts</span>
+              <img src="images/amenities/tower-design.webp" alt="Iconic Architecture - Kalpataru Parkcity" class="pillar-card-img" loading="lazy" decoding="async">
             </div>
-            <ul style="color:var(--text-muted); font-size:0.92rem; line-height:1.7; padding-left:4px;">
-              <li>&bull; <strong>6 Renowned Experts</strong>: AEDAS &amp; HB Design, Arup, L49, Penda &amp; Cracknell</li>
-              <li>&bull; Engineers &amp; designers behind <strong>Sydney Opera House &amp; Burj Khalifa</strong> landscape</li>
-              <li>&bull; Phases: <strong>Estella, Sunrise, Immensa &amp; Launch Code Starlight</strong></li>
-              <li>&bull; De-congested traffic planning engineered for next <strong>25 years</strong></li>
-            </ul>
+            <div class="pillar-card-body">
+              <h3 class="pillar-card-title">World-Class Architecture</h3>
+              <p class="pillar-card-desc">Masterplanned by AEDAS, HB Design, Arup, L49, Penda &amp; Cracknell with 25-yr traffic planning.</p>
+            </div>
           </div>
 
-          <!-- Pillar 3: Iconic Connectivity -->
-          <div class="reveal-item" style="background:#FFFFFF; border:1px solid rgba(78, 136, 118, 0.22); border-radius:12px; padding:24px; box-shadow:var(--shadow-sm); transition:transform 0.2s, box-shadow 0.2s;">
-            <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
-              <div style="width:44px; height:44px; border-radius:10px; background:var(--sky-blue); display:flex; align-items:center; justify-content:center; font-size:1.4rem;">🚄</div>
-              <h3 style="font-size:1.15rem; font-weight:800; color:var(--primary-navy); margin:0;">Iconic Connectivity</h3>
+          <!-- Pillar Card 3: Swimming Pool -->
+          <div class="pillar-img-card">
+            <div class="pillar-card-img-wrap">
+              <span class="pillar-floating-tag">🏊 Resort Pool</span>
+              <img src="images/amenities/swimming-pool.webp" alt="Resort Swimming Pool - Kalpataru Parkcity" class="pillar-card-img" loading="lazy" decoding="async">
             </div>
-            <ul style="color:var(--text-muted); font-size:0.92rem; line-height:1.7; padding-left:4px;">
-              <li>&bull; <strong>Upcoming Metro Line 4 &amp; 5</strong> just minutes away</li>
-              <li>&bull; Quick access to <strong>Eastern Express Highway &amp; Ghodbunder Road</strong></li>
-              <li>&bull; Top schools, premium malls &amp; multi-specialty hospitals within 2-5 kms</li>
-              <li>&bull; Strategic connectivity to Mumbai, Navi Mumbai &amp; BKC</li>
-            </ul>
+            <div class="pillar-card-body">
+              <h3 class="pillar-card-title">Resort Swimming Pool &amp; Deck</h3>
+              <p class="pillar-card-desc">Olympic-length pool with sunken loungers, separate kids' pool, and shaded poolside sundecks.</p>
+            </div>
           </div>
 
-          <!-- Pillar 4: Iconic Amenities -->
-          <div class="reveal-item" style="background:#FFFFFF; border:1px solid rgba(78, 136, 118, 0.22); border-radius:12px; padding:24px; box-shadow:var(--shadow-sm); transition:transform 0.2s, box-shadow 0.2s;">
-            <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
-              <div style="width:44px; height:44px; border-radius:10px; background:var(--sky-blue); display:flex; align-items:center; justify-content:center; font-size:1.4rem;">🎾</div>
-              <h3 style="font-size:1.15rem; font-weight:800; color:var(--primary-navy); margin:0;">405+ Iconic Amenities</h3>
+          <!-- Pillar Card 4: Badminton Arena -->
+          <div class="pillar-img-card">
+            <div class="pillar-card-img-wrap">
+              <span class="pillar-floating-tag">🏸 Indoor Sports</span>
+              <img src="images/amenities/badminton-court.webp" alt="Badminton & Pickleball Court" class="pillar-card-img" loading="lazy" decoding="async">
             </div>
-            <ul style="color:var(--text-muted); font-size:0.92rem; line-height:1.7; padding-left:4px;">
-              <li>&bull; <strong>405+ Lifestyle &amp; Sports Features</strong> across the township</li>
-              <li>&bull; High Street Retail &amp; fine dining options at your doorstep</li>
-              <li>&bull; Reputed <strong>ICSE School</strong> &amp; serene <strong>Place of Worship</strong> on-site</li>
-              <li>&bull; Each phase enjoys its own dedicated clubhouse &amp; swimming pool</li>
-            </ul>
+            <div class="pillar-card-body">
+              <h3 class="pillar-card-title">Badminton &amp; Sports Arena</h3>
+              <p class="pillar-card-desc">High-ceiling indoor courts with professional shock-absorbing flooring and spectator seating.</p>
+            </div>
           </div>
 
-          <!-- Pillar 5: Iconic Nature -->
-          <div class="reveal-item" style="background:#FFFFFF; border:1px solid rgba(78, 136, 118, 0.22); border-radius:12px; padding:24px; box-shadow:var(--shadow-sm); transition:transform 0.2s, box-shadow 0.2s;">
-            <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
-              <div style="width:44px; height:44px; border-radius:10px; background:var(--sky-blue); display:flex; align-items:center; justify-content:center; font-size:1.4rem;">🌳</div>
-              <h3 style="font-size:1.15rem; font-weight:800; color:var(--primary-navy); margin:0;">Iconic Nature</h3>
+          <!-- Pillar Card 5: Gymnasium -->
+          <div class="pillar-img-card">
+            <div class="pillar-card-img-wrap">
+              <span class="pillar-floating-tag">💪 Health &amp; Fitness</span>
+              <img src="images/amenities/gymnasium.webp" alt="State of the art Gymnasium" class="pillar-card-img" loading="lazy" decoding="async">
             </div>
-            <ul style="color:var(--text-muted); font-size:0.92rem; line-height:1.7; padding-left:4px;">
-              <li>&bull; Over <strong>4,500+ Green Trees</strong> across landscaped avenues</li>
-              <li>&bull; Habitat for <strong>100s of Birds &amp; Butterflies</strong></li>
-              <li>&bull; <strong>1.2 Million Pounds of Oxygen</strong> propelled annually</li>
-              <li>&bull; Picturesque 3-Acre Lake Zone with walking &amp; jogging promenades</li>
-            </ul>
+            <div class="pillar-card-body">
+              <h3 class="pillar-card-title">State-of-the-Art Gymnasium</h3>
+              <p class="pillar-card-desc">Fully equipped fitness center with cardio, strength training machines, and yoga studios.</p>
+            </div>
           </div>
 
-          <!-- Pillar 6: Iconic Security -->
-          <div class="reveal-item" style="background:#FFFFFF; border:1px solid rgba(78, 136, 118, 0.22); border-radius:12px; padding:24px; box-shadow:var(--shadow-sm); transition:transform 0.2s, box-shadow 0.2s;">
-            <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
-              <div style="width:44px; height:44px; border-radius:10px; background:var(--sky-blue); display:flex; align-items:center; justify-content:center; font-size:1.4rem;">🔏</div>
-              <h3 style="font-size:1.15rem; font-weight:800; color:var(--primary-navy); margin:0;">Iconic Security</h3>
+          <!-- Pillar Card 6: Basketball & Turf -->
+          <div class="pillar-img-card">
+            <div class="pillar-card-img-wrap">
+              <span class="pillar-floating-tag">🏀 Outdoor Sports</span>
+              <img src="images/amenities/basketball-cricket.webp" alt="Basketball Court & Cricket Turf" class="pillar-card-img" loading="lazy" decoding="async">
             </div>
-            <ul style="color:var(--text-muted); font-size:0.92rem; line-height:1.7; padding-left:4px;">
-              <li>&bull; Advanced <strong>6-Level Integrated Security System</strong></li>
-              <li>&bull; <strong>24*7 Active Command Centre</strong> with high-tech CCTV monitoring</li>
-              <li>&bull; Township’s own <strong>Dedicated Ambulance Service</strong></li>
-              <li>&bull; Strict access-controlled lobbies &amp; vehicle registration</li>
-            </ul>
+            <div class="pillar-card-body">
+              <h3 class="pillar-card-title">Basketball Court &amp; Turf</h3>
+              <p class="pillar-card-desc">Dedicated all-weather basketball court, cricket practice turf, and open-air athletic tracks.</p>
+            </div>
           </div>
 
-          <!-- Pillar 7: Iconic Sustainability -->
-          <div class="reveal-item" style="background:#FFFFFF; border:1px solid rgba(78, 136, 118, 0.22); border-radius:12px; padding:24px; box-shadow:var(--shadow-sm); transition:transform 0.2s, box-shadow 0.2s;">
-            <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
-              <div style="width:44px; height:44px; border-radius:10px; background:var(--sky-blue); display:flex; align-items:center; justify-content:center; font-size:1.4rem;">☀️</div>
-              <h3 style="font-size:1.15rem; font-weight:800; color:var(--primary-navy); margin:0;">Iconic Sustainability</h3>
+          <!-- Pillar Card 7: Clubhouse & Courtyard -->
+          <div class="pillar-img-card">
+            <div class="pillar-card-img-wrap">
+              <span class="pillar-floating-tag">🎉 Celebrations</span>
+              <img src="images/amenities/club-courtyard.webp" alt="Clubhouse Courtyard and Party Lawn" class="pillar-card-img" loading="lazy" decoding="async">
             </div>
-            <ul style="color:var(--text-muted); font-size:0.92rem; line-height:1.7; padding-left:4px;">
-              <li>&bull; <strong>Rainwater Harvesting</strong> &amp; Sewage Treatment Plants (STP)</li>
-              <li>&bull; Energy-efficient LED fixtures &amp; lighting timers in parking</li>
-              <li>&bull; <strong>Electric Vehicle (EV) Charging</strong> bays installed</li>
-              <li>&bull; <strong>Solar Water Heating Systems</strong> provided</li>
-            </ul>
+            <div class="pillar-card-body">
+              <h3 class="pillar-card-title">Clubhouse &amp; Event Lawn</h3>
+              <p class="pillar-card-desc">Multi-level community spaces, grand banquet halls, amphitheatre, and landscaped celebration lawn.</p>
+            </div>
           </div>
 
-          <!-- Pillar 8: Iconic Inheritance -->
-          <div class="reveal-item" style="background:#FFFFFF; border:1px solid rgba(78, 136, 118, 0.22); border-radius:12px; padding:24px; box-shadow:var(--shadow-sm); transition:transform 0.2s, box-shadow 0.2s;">
-            <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
-              <div style="width:44px; height:44px; border-radius:10px; background:var(--sky-blue); display:flex; align-items:center; justify-content:center; font-size:1.4rem;">💎</div>
-              <h3 style="font-size:1.15rem; font-weight:800; color:var(--primary-navy); margin:0;">Iconic Inheritance</h3>
+          <!-- Pillar Card 8: Kids Play Kingdom -->
+          <div class="pillar-img-card">
+            <div class="pillar-card-img-wrap">
+              <span class="pillar-floating-tag">🎠 Children's Zone</span>
+              <img src="images/amenities/kids-play.webp" alt="Kids Adventure Play Park" class="pillar-card-img" loading="lazy" decoding="async">
             </div>
-            <ul style="color:var(--text-muted); font-size:0.92rem; line-height:1.7; padding-left:4px;">
-              <li>&bull; Once-in-a-lifetime township proposition in prime Thane (W)</li>
-              <li>&bull; Built on <strong>51+ Years of Kalpataru’s Quality &amp; Trust</strong></li>
-              <li>&bull; High capital appreciation &amp; timeless intergenerational value</li>
-              <li>&bull; The definitive address for you &amp; your future generations</li>
-            </ul>
+            <div class="pillar-card-body">
+              <h3 class="pillar-card-title">Kids' Adventure Play Kingdom</h3>
+              <p class="pillar-card-desc">Safe rubberized play zone featuring obstacle courses, swings, slides, and discovery corners.</p>
+            </div>
+          </div>
+
+          <!-- Pillar Card 9: Café, Retail & ICSE School -->
+          <div class="pillar-img-card">
+            <div class="pillar-card-img-wrap">
+              <span class="pillar-floating-tag">🛍️ Township Living</span>
+              <img src="images/amenities/cafe-lounge.webp" alt="High Street Retail & Cafeteria" class="pillar-card-img" loading="lazy" decoding="async">
+            </div>
+            <div class="pillar-card-body">
+              <h3 class="pillar-card-title">High Street, Café &amp; ICSE School</h3>
+              <p class="pillar-card-desc">On-campus ICSE school, place of worship, premium retail promenade, and serene café lounges.</p>
+            </div>
           </div>
 
         </div>
