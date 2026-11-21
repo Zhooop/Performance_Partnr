@@ -16,6 +16,7 @@ $RECYCLE.BIN/
 *.tmp
 node_modules/
 scratch/
+images/extracted_plans/
 
 # Specific Invoice & Financial Documents (Never Commit)
 invoice*.pdf

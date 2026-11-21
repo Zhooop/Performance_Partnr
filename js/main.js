@@ -1,6 +1,6 @@
 /**
- * ICONIC OFFICES - THANE-BELAPUR ROAD COMMERCIAL LANDING PAGE
- * Optimized for High-Converting Google Ads Campaigns
+ * KALPATARU PARKCITY (ESTELLA) - LUXURY TOWNSHIP LANDING PAGE
+ * Optimized for High-Converting Google Ads & Meta Campaigns
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -61,14 +61,14 @@ function initBrochureModal() {
       e.preventDefault();
       clearTimeout(autoTimer);
       try {
-        sessionStorage.setItem('kamdhenu_auto_modal_seen', 'true');
+        sessionStorage.setItem('kalpataru_auto_modal_seen', 'true');
       } catch (err) {}
       const context = btn.getAttribute('data-context') || 'brochure';
       
       // Customize modal text based on button clicked
       if (context === 'pricing') {
         modalTitle.textContent = 'Unlock Exclusive Price & Cost Sheet';
-        modalSubtitle.textContent = 'Enter your details to receive unit-wise all-inclusive pricing breakdown.';
+        modalSubtitle.textContent = 'Enter your details to receive unit-wise all-inclusive pricing & payment plans.';
       } else if (context === 'floorplan') {
         modalTitle.textContent = 'Request Official 2D & 3D Floor Plans';
         modalSubtitle.textContent = 'Get detailed carpet area, architectural blueprints & layout PDFs.';
@@ -76,7 +76,7 @@ function initBrochureModal() {
         modalTitle.textContent = 'Schedule a VIP Private Site Visit';
         modalSubtitle.textContent = 'Complimentary luxury cab pick & drop service available.';
       } else {
-        modalTitle.textContent = 'Enquire for Project Pricing & Details';
+        modalTitle.textContent = 'Enquire for Kalpataru Parkcity Details';
         modalSubtitle.textContent = 'Get complete floor layouts, pricing breakdown & site visit appointments.';
       }
 
@@ -87,7 +87,6 @@ function initBrochureModal() {
   function openModal() {
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
-    // Reset to form view if was previously in success state
     modalFormContainer.style.display = 'block';
     successState.classList.remove('active');
     modalForm.reset();
@@ -96,7 +95,7 @@ function initBrochureModal() {
   function closeModal() {
     clearTimeout(autoTimer);
     try {
-      sessionStorage.setItem('kamdhenu_auto_modal_seen', 'true');
+      sessionStorage.setItem('kalpataru_auto_modal_seen', 'true');
     } catch (err) {}
     modal.classList.remove('active');
     document.body.style.overflow = '';
@@ -113,7 +112,7 @@ function initBrochureModal() {
   // Auto-Popup System: Trigger after 5.5s OR when user scrolls to Amenities section
   let autoModalFired = false;
   try {
-    if (sessionStorage.getItem('kamdhenu_auto_modal_seen')) {
+    if (sessionStorage.getItem('kalpataru_auto_modal_seen')) {
       autoModalFired = true;
     }
   } catch (err) {}
@@ -124,10 +123,10 @@ function initBrochureModal() {
 
     autoModalFired = true;
     try {
-      sessionStorage.setItem('kamdhenu_auto_modal_seen', 'true');
+      sessionStorage.setItem('kalpataru_auto_modal_seen', 'true');
     } catch (err) {}
 
-    modalTitle.textContent = 'Enquire for Project Pricing & Details';
+    modalTitle.textContent = 'Enquire for Kalpataru Parkcity Details';
     modalSubtitle.textContent = 'Get instant access to complete floor layouts, verified cost breakdown & payment plans.';
     openModal();
   }
@@ -187,9 +186,6 @@ function initBrochureModal() {
 
   function handleFormLead(formEl, isInsideModal) {
     const submitBtn = formEl.querySelector('button[type="submit"]');
-    const originalText = submitBtn.innerHTML;
-
-    // Simulate validation & loading state
     submitBtn.disabled = true;
     submitBtn.innerHTML = `
       <svg class="animate-spin" style="animation: spin 1s linear infinite; width:18px; height:18px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -199,11 +195,10 @@ function initBrochureModal() {
     `;
 
     setTimeout(() => {
-      // Fire Meta Pixel & Google Analytics Lead Conversion Events
       try {
         if (typeof fbq === 'function') {
           fbq('track', 'Lead', {
-            content_name: 'Commercial Office Suite Inquiry',
+            content_name: 'Kalpataru Parkcity Residence Inquiry',
             status: 'submitted'
           });
         }
@@ -227,9 +222,8 @@ function initBrochureModal() {
         modalFormContainer.style.display = 'none';
         successState.classList.add('active');
       } else {
-        // Hero form submitted -> open modal in success state
         modalTitle.textContent = 'Request Received Successfully!';
-        modalSubtitle.textContent = 'Our commercial advisor will connect with you on WhatsApp shortly.';
+        modalSubtitle.textContent = 'Our relationship advisor will connect with you on WhatsApp shortly.';
         modalFormContainer.style.display = 'none';
         successState.classList.add('active');
         openModal();
@@ -237,7 +231,6 @@ function initBrochureModal() {
     }, 900);
   }
 }
-
 
 /* ==========================================================================
    4. Floor Plan Interactive Tabs
@@ -249,37 +242,42 @@ function initFloorPlanTabs() {
   const superEl = document.getElementById('planSuperArea');
   const balconiesEl = document.getElementById('planBalconies');
   const facingEl = document.getElementById('planFacing');
+  const planImg = document.querySelector('.floor-plan-img');
 
   if (!tabs.length || !titleEl) return;
 
   const floorPlanData = {
-    '539sqft-suite': {
-      title: '539 Sq. Ft. Carpet Boutique Office Suite',
-      carpet: '539 Sq.Ft. Carpet Area',
-      super: '1,078 Sq.Ft. Super Built-up',
-      balconies: 'Park View & City Skyline Options',
-      facing: 'East Facing / Expressway Frontage'
+    'township-master': {
+      title: 'Estella at Kalpataru Parkcity - 100+ Acre Master Layout',
+      carpet: '100+ Acres Integrated Township',
+      super: '20+ Acre Grand Central Park & 3 Acre Lake',
+      balconies: '70% Open Space & 4,500+ Green Trees',
+      facing: 'Designed by 6 World-Class Master Architects',
+      imgSrc: 'images/township-map.webp'
     },
-    '610sqft-executive': {
-      title: '610 Sq. Ft. Carpet Executive Suite',
-      carpet: '610 Sq.Ft. Carpet Area',
-      super: '1,220 Sq.Ft. Super Built-up',
-      balconies: 'Dual Corner Floor-to-Ceiling Glazing',
-      facing: 'Corner Unit with Maximum Natural Daylight'
+    'tower-b-plan': {
+      title: 'Estella Tower Typical Floor Plan',
+      carpet: 'Optimized 4-to-Core & 6-to-Core Layouts',
+      super: 'Double-Height Grand Entrance Lobby',
+      balconies: 'High-Speed Destination Elevators',
+      facing: 'Vastu-Compliant Cross-Ventilated Units',
+      imgSrc: 'images/estella-floor-plan-1.webp'
     },
-    '1310sqft-corporate': {
-      title: '1,310 Sq. Ft. Carpet Corporate Headquarters Suite',
-      carpet: '1,310 Sq.Ft. Carpet Area',
-      super: '2,620 Sq.Ft. Super Built-up',
-      balconies: '180° Panoramic Skyline Views',
-      facing: 'Grand Front-Facing Corporate Layout'
+    '2bhk-unit': {
+      title: '2 BHK Premium Residence with Sundeck',
+      carpet: 'Spacious Living & Dining Area',
+      super: 'Private Balcony with Grand Central Park View',
+      balconies: 'Master Bedroom with Panoramic Glazing',
+      facing: 'East-West Vastu Compliant Facing',
+      imgSrc: 'images/estella-unit-plan-1.webp'
     },
-    '1365sqft-iconic': {
-      title: '1,365 Sq. Ft. Carpet Iconic Flagship Suite',
-      carpet: '1,365 Sq.Ft. Carpet Area',
-      super: '2,730 Sq.Ft. Super Built-up',
-      balconies: 'High-Visibility Dual Aspect Glazing',
-      facing: 'Premier Highway Frontage & Expansive Workspaces'
+    '3bhk-unit': {
+      title: '3 BHK Palatial Residence with Lake Views',
+      carpet: 'Expansive 3 Bed Luxury Suite',
+      super: 'Wrap-Around Sundeck & Island Kitchen Provision',
+      balconies: 'Unobstructed 3-Acre Lake & Skyline Views',
+      facing: 'Maximum Natural Sunlight & Breezy Ventilation',
+      imgSrc: 'images/estella-unit-plan-2.webp'
     }
   };
 
@@ -297,19 +295,21 @@ function initFloorPlanTabs() {
         superEl.textContent = data.super;
         balconiesEl.textContent = data.balconies;
         facingEl.textContent = data.facing;
+        if (planImg && data.imgSrc) {
+          planImg.src = data.imgSrc;
+        }
       }
     });
   });
 }
 
 /* ==========================================================================
-   5. Urgency Countdown Timer (Pre-Launch Benefit)
+   5. Urgency Countdown Timer (Special Township Benefit)
    ========================================================================== */
 function initCountdownTimer() {
   const timerDisplay = document.getElementById('countdownTimer');
   if (!timerDisplay) return;
 
-  // Set target date 4 days from now
   const targetDate = new Date();
   targetDate.setDate(targetDate.getDate() + 4);
   targetDate.setHours(23, 59, 59);
@@ -348,11 +348,11 @@ function initSocialProofToast() {
   if (!toast || !toastName) return;
 
   const activities = [
-    { name: 'Karan Mehta', city: 'Mahape IT Park', action: 'booked a VIP commercial site visit', time: '2 mins ago' },
-    { name: 'Dr. Suresh Patil', city: 'Vashi Sector 17', action: 'enquired for 539 Sq.Ft. suite', time: '4 mins ago' },
-    { name: 'Rajiv Khanna', city: 'Airoli Mindspace', action: 'unlocked 610 Sq.Ft. corner layout', time: '7 mins ago' },
-    { name: 'Apex Logistics Ltd.', city: 'Thane West', action: 'reserved 1,365 Sq.Ft. Corporate Suite', time: '11 mins ago' },
-    { name: 'Sunil Desai', city: 'BKC, Mumbai', action: 'requested commercial ROI & payment plan', time: '15 mins ago' }
+    { name: 'Amit Shah', city: 'Thane West', action: 'enquired for 3 BHK Park View residence', time: '2 mins ago' },
+    { name: 'Dr. Priya Kulkarni', city: 'Mulund West', action: 'booked a private township tour', time: '5 mins ago' },
+    { name: 'Vikram Singhal', city: 'Powai', action: 'unlocked 2 BHK with Sundeck floor plan', time: '8 mins ago' },
+    { name: 'Rohan & Neha Mehta', city: 'Bandra', action: 'requested Kalpataru Parkcity price sheet', time: '12 mins ago' },
+    { name: 'Sanjay Malhotra', city: 'Ghodbunder Road', action: 'scheduled a VIP site visit appointment', time: '16 mins ago' }
   ];
 
   let currentIndex = 0;
@@ -365,7 +365,6 @@ function initSocialProofToast() {
 
     toast.classList.add('show');
 
-    // Auto hide after 5 seconds
     setTimeout(() => {
       toast.classList.remove('show');
     }, 5000);
@@ -373,7 +372,6 @@ function initSocialProofToast() {
     currentIndex = (currentIndex + 1) % activities.length;
   }
 
-  // Show first toast after 4 seconds, then repeat every 20 seconds
   setTimeout(() => {
     showToast();
     setInterval(showToast, 20000);
@@ -400,38 +398,6 @@ function initConnectivityAccordion() {
 }
 
 /* ==========================================================================
-   7. Hero Banner Interactive Image Switcher
-   ========================================================================== */
-function initBannerSwitcher() {
-  const thumbButtons = document.querySelectorAll('.banner-interactive-thumbs .thumb-btn');
-  const bannerImg = document.getElementById('heroMainBannerImg');
-  const captionTitle = document.getElementById('bannerCaptionTitle');
-  const captionSub = document.getElementById('bannerCaptionSub');
-
-  if (!thumbButtons.length || !bannerImg) return;
-
-  thumbButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      thumbButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const newSrc = btn.getAttribute('data-img-src');
-      const newTitle = btn.getAttribute('data-img-title');
-      const newSub = btn.getAttribute('data-img-sub');
-
-      // Subtle fade effect
-      bannerImg.style.opacity = '0.4';
-      setTimeout(() => {
-        bannerImg.src = newSrc;
-        if (captionTitle) captionTitle.textContent = newTitle;
-        if (captionSub) captionSub.textContent = newSub;
-        bannerImg.style.opacity = '1';
-      }, 150);
-    });
-  });
-}
-
-/* ==========================================================================
    8. Mobile Navigation Toggle & Smooth Link Scrolling
    ========================================================================== */
 function initMobileMenu() {
@@ -446,7 +412,6 @@ function initMobileMenu() {
     navMenu.classList.toggle('active');
   });
 
-  // Close menu when clicking any nav link
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       navLinks.forEach(l => l.classList.remove('active'));
@@ -455,14 +420,12 @@ function initMobileMenu() {
     });
   });
 
-  // Close menu when clicking outside
   document.addEventListener('click', (e) => {
     if (!navMenu.contains(e.target) && !menuBtn.contains(e.target)) {
       navMenu.classList.remove('active');
     }
   });
 
-  // Highlight active link based on scroll position
   window.addEventListener('scroll', () => {
     const scrollPos = window.scrollY + 100;
     const sections = document.querySelectorAll('section[id], div[id]');
@@ -484,5 +447,3 @@ function initMobileMenu() {
     });
   });
 }
-
-

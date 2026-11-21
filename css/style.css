@@ -6,45 +6,45 @@
 
 /* --- 1. CSS Variables & Design Tokens (Light Luxury Palette) --- */
 :root {
-  /* Brand Color System - Kamdhenu Business District */
-  --primary-navy: #292C3C;       /* Main brand color, headings, dark sections */
-  --royal-blue: #2457D6;         /* Primary CTA color, highlights, links */
-  --royal-blue-hover: #1745B5;   /* Button hover state */
-  --building-blue: #7198C5;      /* Secondary elements, icons, accents */
-  --sky-blue: #DCEFF8;           /* Backgrounds, light sections, gradients */
-  --ice-blue: #F3F9FC;           /* Section backgrounds, cards, subtle accents */
-  --off-white: #FAFAF8;          /* Page background, alternate sections */
-  --soft-brown: #654C45;         /* Supporting accent, icons, highlights */
+  /* Brand Color System - Kalpataru Parkcity & Estella Luxury */
+  --primary-navy: #15352c;       /* Main brand color, headings, dark sections */
+  --royal-blue: #236955;         /* Primary CTA color, highlights, links */
+  --royal-blue-hover: #194f40;   /* Button hover state */
+  --building-blue: #4e8876;      /* Secondary elements, icons, accents */
+  --sky-blue: #e8f3ef;           /* Backgrounds, light sections, gradients */
+  --ice-blue: #f3f8f6;           /* Section backgrounds, cards, subtle accents */
+  --off-white: #f8faf9;          /* Page background, alternate sections */
+  --soft-brown: #967d53;         /* Warm Champagne Bronze accent */
   --pure-white: #FFFFFF;         /* Cards, containers, text on dark */
 
   /* Surface & Background Mapping */
-  --bg-main: #F3F9FC;            /* Clean ice blue base */
-  --bg-secondary: #DCEFF8;       /* Sky blue alternate sections */
+  --bg-main: #f3f8f6;            /* Clean light sage base */
+  --bg-secondary: #e8f3ef;       /* Soft sage-sky alternate sections */
   --bg-card: #FFFFFF;            /* Pure white cards */
-  --card-border: rgba(113, 152, 197, 0.28); /* Building blue subtle border */
-  --card-hover-border: #2457D6;
+  --card-border: rgba(78, 136, 118, 0.22); /* Soft forest border */
+  --card-hover-border: #236955;
   
-  /* Accent Tokens (Mapped to Royal & Building Blue) */
-  --gold-primary: #2457D6;       /* Royal Blue CTA */
-  --gold-light: #4578f2;
-  --gold-dark: #1745B5;          /* Royal Blue Hover */
-  --gold-gradient: linear-gradient(135deg, #2457D6 0%, #1745B5 100%);
-  --gold-soft-bg: rgba(36, 87, 214, 0.08);
-  --gold-badge-bg: #DCEFF8;      /* Sky Blue Badge */
+  /* Accent Tokens (Mapped to Luxury Emerald & Champagne Gold) */
+  --gold-primary: #236955;       /* Primary Luxury Emerald CTA */
+  --gold-light: #2d826a;
+  --gold-dark: #194f40;          /* Emerald Hover */
+  --gold-gradient: linear-gradient(135deg, #236955 0%, #17483a 100%);
+  --gold-soft-bg: rgba(35, 105, 85, 0.08);
+  --gold-badge-bg: #e8f3ef;      /* Soft Sage Badge */
   
   /* Typography & Neutral Colors */
-  --text-main: #292C3C;          /* Primary Navy */
-  --text-muted: #536377;         /* Navy-tinted Medium Slate */
-  --text-dim: #7198C5;           /* Building Blue */
+  --text-main: #15352c;          /* Deep Forest Slate */
+  --text-muted: #4e635b;         /* Muted Forest Slate */
+  --text-dim: #709488;           /* Light Sage Accent */
   --text-white: #FFFFFF;
   
   /* Functional Colors */
   --whatsapp-green: #25d366;
   --whatsapp-hover: #20ba59;
-  --border-light: rgba(113, 152, 197, 0.22);
-  --border-card: rgba(113, 152, 197, 0.25);
+  --border-light: rgba(78, 136, 118, 0.2);
+  --border-card: rgba(78, 136, 118, 0.22);
   --surface-glass: rgba(255, 255, 255, 0.96);
-  --surface-glass-border: rgba(36, 87, 214, 0.28);
+  --surface-glass-border: rgba(35, 105, 85, 0.25);
 
   /* Typography - Unified Single Font Family */
   --font-serif: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -56,7 +56,7 @@
   --shadow-sm: 0 2px 8px rgba(41, 44, 60, 0.06);
   --shadow-md: 0 8px 20px -3px rgba(41, 44, 60, 0.1);
   --shadow-lg: 0 16px 36px -6px rgba(41, 44, 60, 0.14);
-  --shadow-gold: 0 8px 24px -4px rgba(36, 87, 214, 0.35);
+  --shadow-gold: 0 8px 24px -4px rgba(35, 105, 85, 0.32);
 
   /* Spacing */
   --container-max: 1280px;
