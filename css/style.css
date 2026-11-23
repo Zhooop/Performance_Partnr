@@ -2682,19 +2682,13 @@ ul {
 }
 
 /* Responsive adjustments for Suites Config Grid & Footer RERA Box */
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .suites-config-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 10px !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
   }
 
   .footer-rera-box {
     padding: 12px 14px !important;
-  }
-}
-
-@media (max-width: 380px) {
-  .suites-config-grid {
-    grid-template-columns: 1fr !important;
   }
 }
